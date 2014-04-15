@@ -219,12 +219,6 @@ b {
     font-weight: 600;
 }
 
-.external-container a {
-    font-weight: 400;
-    text-decoration:underline;
-    color: #16a085;
-}
-
 .centered {
     text-align: center !important;
 }
@@ -263,8 +257,14 @@ b {
 
 .external-container p {
     line-height: 1.8em;
-    
+    letter-spacing: 1px;
     text-align: justify;
+}
+
+.external-container a {
+    font-weight: 400;
+    text-decoration:underline;
+    color: #16a085;
 }
 
 .bottom-main-container {
