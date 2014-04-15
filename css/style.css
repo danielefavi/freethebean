@@ -1,5 +1,16 @@
 @font-face {
     font-family: 'Open Sans';
+    src: url('../fonts/OpenSans/OpenSans-Light-webfont.eot');
+    src: url('../fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/OpenSans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans/OpenSans-Light-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
     src: url('../fonts/OpenSans/OpenSans-Regular-webfont.eot');
     src: url('../fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/OpenSans/OpenSans-Regular-webfont.woff') format('woff'),
@@ -34,13 +45,14 @@
 
 
 
+
 body {
     font-family: 'Open Sans', Calibri, Arial, sans-serif;
     color: #89867e;
-    background: #ecf0f1;
+    background: #F5F7F8;
     font-size: 1.05em;
     line-height: 1;
-    font-weight: 400;   
+    font-weight: 400;
 }
 
 *, *:after, *:before {
@@ -123,11 +135,7 @@ body {
     margin: 80px auto 20px auto;
     padding: 60px 20px 60px 20px;
     text-align: center;
-    background-color: #FFF;
-    border: 3px solid #16a085;
-    
     width: 400px;
-    
     border-radius: 10px;
     -moz-border-radius: 10px; 
     -webkit-border-radius: 10px;
@@ -177,7 +185,6 @@ hr {
 }
 
 h1 {
-    font-weight: 400;
     font-size: 3.5em;
     line-height: 1em;
 }
@@ -186,6 +193,7 @@ h1 {
     color: #1abc9c;
     margin: 10px 0px 0px 10px;
     padding: 0;
+    font-weight: 300;
 }
 
 
@@ -255,7 +263,7 @@ b {
 
 .external-container p {
     line-height: 1.8em;
-    letter-spacing: 1px;
+    
     text-align: justify;
 }
 
