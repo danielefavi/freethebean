@@ -135,11 +135,7 @@ body {
     margin: 80px auto 20px auto;
     padding: 60px 20px 60px 20px;
     text-align: center;
-    background-color: #FFF;
-    border: 3px solid #16a085;
-    
     width: 400px;
-    
     border-radius: 10px;
     -moz-border-radius: 10px; 
     -webkit-border-radius: 10px;
@@ -223,12 +219,6 @@ b {
     font-weight: 600;
 }
 
-.external-container a {
-    font-weight: 400;
-    text-decoration:underline;
-    color: #16a085;
-}
-
 .centered {
     text-align: center !important;
 }
@@ -267,8 +257,14 @@ b {
 
 .external-container p {
     line-height: 1.8em;
-    
+    letter-spacing: 1px;
     text-align: justify;
+}
+
+.external-container a {
+    font-weight: 400;
+    text-decoration:underline;
+    color: #16a085;
 }
 
 .bottom-main-container {
