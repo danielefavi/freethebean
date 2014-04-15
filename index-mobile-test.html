@@ -1,0 +1,253 @@
+<html lang="en">  
+    
+    <head>
+        
+        <meta charset="utf-8" />   
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <title>Free the Bean!</title>
+        
+        <script src="js/jquery-1.11.0.min.js"></script>
+        
+        <script src="js/drawers.js"></script>
+        <script src="js/matrix-builder.js"></script>
+        <script src="js/the-brain.js"></script>
+        <script src="js/base-funtions.js"></script>
+        
+        <link rel="stylesheet" href="css/loader.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fa-custom.css" />
+        <link rel="stylesheet" href="css/ui-elements.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        
+        
+        <link rel="apple-touch-icon" href="images/icon1.png" />
+        <link rel="icon" href="images/favicon.png" />
+
+
+    </head> 
+    
+    <body>   
+
+        
+        <div class="wrapper">
+            
+            <h1 class="main-title">Free the Bean!</h1>
+            
+            <div id="loading">
+                <div class="spinner">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                    <div class="dot3"></div>
+                </div>
+                <p>
+                    Just a moment... <br /> I'm preparing the board game!
+                </p>
+            </div>
+            
+            <div class="main-container loading-hidden">
+                
+                    <div class="col-2-3">
+
+                        <div id="info-box"></div>
+                        <div id="disable-click-box"></div>
+                        
+                        <div class="content-space">
+                            <div id="field-container"></div>
+                            
+                            
+                            <div id="intro">
+                                <p class="intro-important">
+                                    <b>How to play:</b>
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-left">
+                                        <img src="images/demo-img-1-small.png" alt="demo image 1" />
+                                    </div>
+                                    <div class="col-right">
+                                        <p>
+                                            Click on a stick to remove it
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-left">
+                                        <img src="images/demo-img-2-small.png" alt="demo image 2" />
+                                    </div>
+                                    <div class="col-right">
+                                        When you free a bean you get one point and a extra turn
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                    </div>
+        
+                    <div class="col-1-3 game-settings">
+                        <div class="line-panel line-panel-mb-view">
+                            <h4>Choose your opponent:</h4>
+                            <button class="icon-button fa fa-user fa-3x mobile-button" id="localBtn" onclick="javascript:setLocalGame();"></button>
+                            <button class="icon-button fa fa-desktop fa-3x mobile-button" id="vsComputerBtn" onclick="javascript:setVsComputer();"></button>
+                        </div>
+                        <div class="line-panel line-panel-mb-view">
+                            <h4>the playground:</h4>
+                            <button class="icon-button icon-triangle-small mobile-button" id="triangleBtn" onclick="javascript:setPlaygroundForm('triangle');"></button>
+                            <button class="icon-button icon-square-small mobile-button" id="squareBtn" onclick="javascript:setPlaygroundForm('square');"></button>
+                        </div>
+                        <div class="line-panel line-panel-mb-view">
+                            <h4>and playground size:</h4>
+                            <button class="icon-button icon-button-small fa fa-square" id="smallPlaygroundBtn" onclick="javascript:setPlaygroundSize(3);"></button>
+                            <button class="icon-button icon-button-small fa fa-square fa-2x" id="normalPlaygroundBtn" onclick="javascript:setPlaygroundSize(4);"></button>
+                            <button class="icon-button icon-button-small fa fa-square fa-3x" id="bigPlaygroundBtn" onclick="javascript:setPlaygroundSize(5);"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-1-3 game-elements">
+                        <div class="line-panel mobile-score-view">
+                            <h4>SCORE</h4>
+
+                            <div id="score-table">
+
+                                <div class="row">
+                                    <div id="player1-icon" class="cell right-border bottom-border"><i class="fa fa-user"></i></div>
+                                    <div id="player2-icon" class="cell bottom-border"><i class="fa fa-user"></i></div>
+                                </div>
+
+                                <div class="row">
+                                    <div id="player1-score" class="cell right-border">0</div>
+                                    <div id="player2-score" class="cell">0</div>
+                                </div>
+
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        <div class="line-panel mobile-score-view">
+                            <p id="gameTurn"></p>
+                            <p id="turnNumber"></p>
+                        </div>
+                    </div>
+                
+                    <div class="clear"></div>
+
+            </div>
+    
+            <div class="bottom-main-container loading-hidden">
+                <button id="startButton" class="btn btn-rounded game-settings play-button" onclick="javascript:startGame();"> LET'S PLAY!!! </button>
+                
+                <button id="newGameButton" class="btn btn-rounded game-button game-elements" onclick="javascript:showDialogBoxNewGame();"> New Game </button>
+                <button id="restartButton" class="btn btn-rounded game-button game-elements" onclick="javascript:showDialogBoxRestartMatch();"> Restart Match </button>
+            </div> 
+    
+            <div class="bottom-left-main-container loading-hidden">
+                
+                <div class="color-palette-line">
+                    <button class="btn-palette-color btn-torquoise" onclick="javascript:changeColor('1abc9c','16a085');"></button>
+                    <button class="btn-palette-color btn-emerald" onclick="javascript:changeColor('2ecc71','27ae60');"></button>
+                    <button class="btn-palette-color btn-lightBlue" onclick="javascript:changeColor('4DD4FD','48C6ED');"></button>
+                    <button class="btn-palette-color btn-river" onclick="javascript:changeColor('3498db','2980b9');"></button>
+                    <button class="btn-palette-color btn-gray" onclick="javascript:changeColor('95a5a6','7f8c8d');"></button>
+                </div>
+                <div class="color-palette-line">
+                    <button class="btn-palette-color btn-yellow" onclick="javascript:changeColor('f1c40f','f39c12');"></button>
+                    <button class="btn-palette-color btn-orange" onclick="javascript:changeColor('e67e22','d35400');"></button>
+                    <button class="btn-palette-color btn-red" onclick="javascript:changeColor('e74c3c','c0392b');"></button>
+                    <button class="btn-palette-color btn-amethys" onclick="javascript:changeColor('9b59b6','8e44ad');"></button>
+                    <button class="btn-palette-color btn-asphalt" onclick="javascript:changeColor('34495e','2c3e50');"></button>
+                    
+                </div>
+                
+            </div>
+    
+        <div class="clear"></div>
+            
+        <div class="external-container">
+            <p>
+                <b>Free the Bean</b> is a experimental open source project created by <b>Daniele Favi</b>. Feel free to contact me for further information, questions and suggestions at            
+            </p>
+
+            <p class="centered">
+                    <script type="text/javascript"><!--
+    var luvyzvs = ['a','=',':','o',' ','h','>','i','a','e','a','3','m','<',' ','m','r','@','c','=','"','>','l','<','s','a','l','f','v','"','a','m','o','v','@','a','m','a','i','o','c','m','l','l','f','e','m','s','g','a','3','c','l','.','f','"','a','8','.','8','i','s','"','g','i','t','s','/'];var fraxgey = [66,7,15,30,2,3,67,11,25,5,10,21,56,0,33,24,4,54,61,39,40,47,35,64,38,36,45,6,18,46,1,63,62,50,22,49,9,17,58,14,29,42,12,59,48,41,31,51,55,43,53,34,27,60,16,32,57,52,28,20,26,37,8,23,44,13,19,65];var kcoagtv= new Array();for(var i=0;i<fraxgey.length;i++){kcoagtv[fraxgey[i]] = luvyzvs[i]; }for(var i=0;i<kcoagtv.length;i++){document.write(kcoagtv[i]);}
+    // --></script>
+            </p>
+
+            <p>
+                Thanks to <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for the icon set and <a href="https://github.com/tobiasahlin/SpinKit">SpinKit</a> for the loader spin inspiration.
+            </p>
+            
+            <p class="centered">
+                <b>;)</b>
+            </p>
+            <p class="centered">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="favs83" data-size="large" data-hashtags="FreeTheBean">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </p>
+        </div>
+            
+        </div>
+        
+        <div class="clear"></div>
+        
+        
+        
+        <script>   
+
+            // FIELD'S PARAMETER
+            var lo = 3; //connector line offset (half with of connector size)
+            var lw = 50; // connector line width
+            var no = 10; //node offset (node width + border size)
+
+
+            /* Numerical matrix gamefield */
+            var matrix = [];
+
+            /*
+                this array keeps the game infos:
+                    game[0] : player turn (NOTE: in case of a match vs Computer the player 2 is the computer)
+                    game[1] : player 1 points
+                    game[2] : player 2 points
+                    game[3] : turn number
+                    game[4] : game status --> not_started / ongoing / completed
+            */
+            var game = [];
+            game[0] = 1;
+            game[1] = 0;
+            game[2] = 0;
+            game[3] = 0;
+            game[4] = 'not_started'; // game status --> not_started / ongoing / completed
+
+            /* 
+                Game settings 
+                    settings[0] : oppenent --> local / vsComputer
+                    settings[1] : playground type --> triangle / square
+                    settings[2] : playground size --> small = 3 / normal = 4 / big = 5
+                    settings[3] : difficulty --> easy / normal / difficult
+            */
+
+            var settings = [];
+            settings[0] = 'vsComputer';
+            settings[1] = 'square';
+            settings[2] = 4;
+            settings[3] = 'normal';
+            
+            
+            $(window).load( function() {
+                
+                $("#loading").hide();
+                $(".loading-hidden").fadeIn(300);
+                
+                checkSettingsButtons();
+            
+            });
+            
+        </script>   
+        
+    </body>   
+    
+</html>
