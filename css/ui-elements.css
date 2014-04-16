@@ -25,21 +25,20 @@
     z-index: 10;
 }
 
-
 .conn:hover {
     -moz-box-shadow: 0 0 10px rgba(255,140,0,0.8);
     -webkit-box-shadow: 0 0 10px rgba(255,140,0,0.8);
     box-shadow: 0 0 10px rgba(255,140,0,0.8);
 
-    background-color: orange;
+    background: orange;
     z-index: 11;
+	
     -webkit-transition: all 150 linear;
     -o-transition: all 150 linear;
     -moz-transition: all 150 linear;
     -ms-transition: all 150 linear;
     -kthtml-transition: all 150 linear;
     transition: all 150 linear;
-
 }
 
 .conn-hor {
@@ -205,7 +204,7 @@ button::-moz-focus-inner {
     background-color: #AAA;
     width: 20px;
     height: 20px;
-    padding: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 }
 
 .btn-palette-color-2 {
