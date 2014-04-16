@@ -5,12 +5,14 @@ Free the Beam is open source experimental web game build with javascript/jQuery,
 
 <p align="center">
   <a href="http://danielefavi.github.io/freethebean/">Try it now</a>
+  
 </p>
 
-
-
 <p align="center">
-  <img src="http://danielefavi.github.io/freethebean/images/screenshot.png" alt="ftb_screenshot" />
+
+  <a href="http://danielefavi.github.io/freethebean/">
+    <img src="http://danielefavi.github.io/freethebean/images/screenshot.png" alt="ftb_screenshot" />
+  </a>
 </p>
 
 
