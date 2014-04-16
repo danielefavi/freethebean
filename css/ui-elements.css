@@ -199,11 +199,12 @@ button::-moz-focus-inner {
 
 .btn-palette-color {
     cursor: pointer;
-    margin-right: 15px;
+    margin-right: 10px;
     border: 4px solid #000;
     background-color: #AAA;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
+	border-radius: 15px;
 	padding: 0px 0px 0px 0px;
 }
 
@@ -227,8 +228,8 @@ button::-moz-focus-inner {
 }
 
 .color-palette-line {
-    margin: 0px 0px 15px 0px;
-    line-height: 15px;
+    margin: 0px 0px 10px 0px;
+    line-height: 10px;
 }
 
 .btn-torquoise {
