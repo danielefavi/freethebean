@@ -194,6 +194,7 @@ h1 {
     margin: 10px 0px 0px 10px;
     padding: 0;
     font-weight: 300;
+    float: left;
 }
 
 
@@ -248,6 +249,21 @@ b {
 	vertical-align: middle !important;
 }
 
+.contacts-container {
+    float:right;
+    padding: 35px 10px 0px;
+    padding: 35px 20px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.contact-icon {
+    margin-left: 20px;
+    color: #89867E;
+}
+
+.contact-icon:hover {
+    color: #555;
+}
 
 .external-container {
     width: 500px;
