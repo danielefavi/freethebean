@@ -1,11 +1,10 @@
 Free The Bean!
 ===========
 
-Free the Beam is open source experimental web game build with javascript/jQuery, CSS and HTML.
+Free the Beam is an experimental web game build with javascript/jQuery, CSS and HTML.
 
 <p align="center">
   <a href="http://danielefavi.github.io/freethebean/">Try it now!</a>
-  
 </p>
 
 <p align="center">
@@ -15,7 +14,7 @@ Free the Beam is open source experimental web game build with javascript/jQuery,
   </a>
 </p>
 
-
-
-## License
-Free The Beam is under the licence [MIT license.](https://github.com/danielefavi/freethebean/blob/master/LICENSE)
+<p align="center">
+More info at <br />
+<a href="https://www.danielefavi.com/free-the-bean/">https://www.danielefavi.com/free-the-bean/</a>
+</p>
